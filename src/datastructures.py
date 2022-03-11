@@ -41,6 +41,10 @@ class FamilyStructure:
         # fill this method and update the return
         if(not member["id"]):
             member["id"] = self._generateId()
+
+        for actual_member in self._members:
+            if(member["id"] == actual_member["id"]):
+                member["id"] = self._generateId() 
         
         member["last_name"] = self.last_name
 
